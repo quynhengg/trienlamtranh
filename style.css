@@ -1,0 +1,527 @@
+/* GLOBAL */
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+html, body {
+    font-family: "Lato", sans-serif;
+    background-color: #F5F5F5;
+}
+
+.heading--white{
+    color: #fff;
+}
+.heading--white p{
+    color: #fff;
+}
+
+/* HEADER */
+header {
+    background-color: #3b352b;
+    padding: 0 20px;
+    position: fixed;  
+    top: 0;           
+    width: 100%;       
+    z-index: 1000;    
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    position: relative;
+    height: 60px;
+}
+
+header nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    padding: 12px 20px;
+    display: block;
+    color: #fff;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+header nav ul li a:hover {
+    background-color: #999; 
+    color: #000;
+}
+
+.headersearch > i {
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 14px 20px;
+}
+
+.headersearch > i:hover {
+    background-color: #555;
+}
+
+/* BODY  */
+body {
+    padding-top: 60px;
+}
+
+/* CAROULSEL */
+.carouselTheBand {
+    margin-top: 0px;
+    height: 700px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carouselTheBand .carousel-item img {
+    height: 700px;
+    width: 100%;
+    object-fit: cover;
+    transition: opacity 0.6s ease, scale 0.6s ease; 
+}
+
+/* Overlay */
+.carouselTheBand::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+/* Caption */
+.carousel-caption {
+    position: absolute;
+    bottom: 20%;
+    left: 5%;
+    text-align: left;
+    color: #fff;
+    z-index: 3;
+}
+
+.carousel-caption h5 {
+    font-size: 2.3rem;
+    font-weight: 700;
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    color: #eee;
+    margin-top: 10px;
+}
+
+/* GIỚI THIỆU */
+.intro-section {
+    width: 100%;
+    min-height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 5%;
+    gap: 40px;
+    background-color: #fcf8f1;
+}
+
+.intro-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;     
+}
+
+.intro-title {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
+}
+
+.intro-text {
+    font-size: 15px;
+    line-height: 1.75;
+    text-align: justify;
+    max-width: 520px;      
+    margin: 0 auto;          
+}
+
+.intro-image {
+    flex: 1;
+    height: 450px;
+}
+
+/* GALLERY  */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 40px;
+}
+
+.gallery-section {
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;   
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #F2EBDD;
+}
+
+.gallery-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #333;
+    letter-spacing: 1px;
+   text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
+}
+
+.gallery-item {
+    border-radius: 0;     
+    overflow: hidden;
+    padding-bottom: 20px;
+    transition: transform .3s ease;
+}
+
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.gallery-item h5 {
+    font-size: 18px;
+    margin: 15px;
+    font-family: 'Playfair Display', serif;
+}
+
+.gallery-item .short-desc {
+    font-size: 14px;
+    opacity: 0.8;
+    margin: 0 15px 15px;
+}
+
+.gallery-item button {
+    margin-left: 15px;
+    padding: 8px 14px;
+    background: #26221b;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.gallery-item button:hover {
+    background: #000;
+}
+
+/* --- MODAL --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    width: 65%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 16px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-content img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+#closeModal {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* CONTACT */
+.contact_section {
+    padding: 80px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.contact_title {
+    font-size: 1.875rem;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
+}
+
+.contact_subtitle {
+    color: #555;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.contact_container {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* Thông tin liên hệ */
+.contact_info {
+    flex: 1;
+    min-width: 280px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.contact_info i {
+    margin-right: 12px;
+    color: #222;
+}
+
+/* Form liên hệ */
+.contact_form {
+    flex: 1;
+    min-width: 280px;
+    text-align: left;
+}
+
+.contact_form .row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.contact_form input,
+.contact_form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.contact_form textarea.message_input {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.send_btn {
+    background-color: #222;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s; 
+}
+
+.send_btn:hover {
+    background-color: #000;
+}
+
+/* FOOTER */
+.footer {
+    padding: 50px 0;
+    text-align: center;
+    background: #f1f1f1;
+    position: relative;
+}
+
+.footer_icons a {
+    text-decoration: none;
+    color: #333;
+    font-size: 24px;
+    margin: 0 8px;
+    transition: 0.3s;
+}
+
+.footer_icons a:hover {
+    opacity: 0.6;
+}
+
+.footer_text {
+    color: #777;
+    margin-top: 20px;
+}
+
+/* RESPONSIVE */
+/* Large Tablet (max-width: 1200px) */
+@media (max-width: 1200px) {
+    .intro-image {
+        height: 380px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 2rem;
+    }
+}
+
+/* Tablet (max-width: 992px) */
+@media (max-width: 992px) {
+
+    /* Gallery: 3 cột -> 2 cột */
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+
+    /* Modal rộng hơn */
+    .modal-content {
+        width: 80%;
+    }
+
+    /* Intro: chuyển sang 1 cột */
+    .intro-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-text {
+        max-width: 600px;
+    }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+
+    /* Header */
+    header nav ul li a {
+        padding: 10px 12px;
+        font-size: 0.95rem;
+    }
+
+    .sitename {
+        font-size: 1.2rem;
+    }
+
+    /* Carousel */
+    .carouselTheBand {
+        height: 550px;
+    }
+
+    .carouselTheBand .carousel-item img {
+        height: 550px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.8rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+
+    /* Intro */
+    .intro-title {
+        font-size: 24px;
+    }
+
+    .intro-text {
+        font-size: 14px;
+    }
+
+    /* Gallery */
+    .gallery-item img {
+        height: 180px;
+    }
+
+    /* Contact */
+    .contact_container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* Mobile nhỏ (max-width: 576px) */
+@media (max-width: 576px) {
+
+    /* Gallery: 1 cột */
+    .gallery {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .gallery-item h5 {
+        font-size: 16px;
+    }
+
+    .gallery-item .short-desc {
+        font-size: 13px;
+    }
+
+    .gallery-item button {
+        padding: 7px 12px;
+        font-size: 13px;
+    }
+
+    .modal-content {
+        width: 90%;
+        padding: 18px;
+    }
+
+    #closeModal {
+        font-size: 26px;
+    }
+
+    /* Footer */
+    .footer_text {
+        font-size: 14px;
+    }
+}
+
+/* Extra Small Mobile (max-width: 400px) */
+@media (max-width: 400px) {
+    .intro-title {
+        font-size: 20px;
+    }
+
+    .intro-text {
+        font-size: 13px;
+    }
+
+    .contact_info,
+    .contact_form {
+        font-size: 14px;
+    }
+}
