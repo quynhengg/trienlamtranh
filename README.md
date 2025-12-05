@@ -2,7 +2,7 @@
 
 ## Giới thiệu
 
-Website triển lãm tranh thời Phục Hưng, cung cấp carousel tác phẩm, phần giới thiệu, tìm kiếm hình ảnh và mục liên hệ.
+Trang web được tạo ra như một triển lãm tranh Phục Hưng trực tuyến, nơi người xem có thể khám phá những tác phẩm nghệ thuật nổi tiếng thông qua giao diện đơn giản, thẩm mỹ và dễ sử dụng. Website gồm các mục chính như carousel giới thiệu tranh, bộ sưu tập hình ảnh, mô tả chi tiết từng tác phẩm và trang liên hệ. Với bố cục rõ ràng và khả năng hiển thị tốt trên cả máy tính lẫn điện thoại, trang web mang đến trải nghiệm xem tranh trực tuyến thuận tiện và trực quan hơn.
 
 ## Thành viên nhóm
 
